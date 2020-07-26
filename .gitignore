@@ -1,0 +1,6 @@
+vendor
+db.cred.php
+devices
+.idea
+composer.lock
+composer.phar

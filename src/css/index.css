@@ -1,0 +1,104 @@
+/*
+ * Copyright (C) 2020 The Dirty Unicorns Project
+ * Copyright (C) 2020 James Taylor <jmz.taylor16@gmail.com>
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+#wrapper {
+    overflow-x: hidden;
+}
+
+#sidebar-wrapper {
+    min-height: 100vh;
+    margin-left: -15rem;
+    -webkit-transition: margin .25s ease-out;
+    -moz-transition: margin .25s ease-out;
+    -o-transition: margin .25s ease-out;
+    transition: margin .25s ease-out;
+}
+
+#sidebar-wrapper .sidebar-heading {
+    padding: 0.875rem 1.25rem;
+    font-size: 1.2rem;
+}
+
+#sidebar-wrapper .list-group {
+    width: 15rem;
+}
+
+#page-content-wrapper {
+    min-width: 100vw;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+    margin-left: 0;
+}
+
+@media (min-width: 768px) {
+    #sidebar-wrapper {
+        margin-left: 0;
+    }
+
+    #page-content-wrapper {
+        min-width: 0;
+        width: 100%;
+    }
+
+    #wrapper.toggled #sidebar-wrapper {
+        margin-left: -15rem;
+    }
+
+    table {
+        display: inline-table !important;
+    }
+}
+
+.navbar {
+    background-color: #930a00;
+}
+
+.darkmode--activated .link {
+    color: #930a00;
+}
+
+.link {
+    color: #000000;
+}
+
+.img {
+    width: 200px;
+}
+
+.card {
+    margin: 18px;
+    padding: 18px;
+}
+
+.darkmode--activated table, .darkmode--activated .list-group-item, .darkmode--activated .card {
+    color: #ffffff;
+    background-color: #000;
+}
+
+.darkmode--activated .selected {
+    background-color:grey !important;
+}
+
+.selected, a.selected:hover {
+    background-color:grey !important;
+    color: white;
+}
+
+.darkmode-toggle {
+    z-index: 9;
+}
