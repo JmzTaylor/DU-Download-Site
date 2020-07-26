@@ -37,9 +37,6 @@ USER nobody
 WORKDIR /var/www/html
 COPY --chown=nobody src/ /var/www/html/
 
-# Add environment variables to working dir
-CMD ["env >> /var/www/html/.env"]
-
 # Run composer install to install the dependencies
 RUN composer install --optimize-autoloader --no-interaction --no-progress
 
