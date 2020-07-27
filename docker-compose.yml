@@ -1,0 +1,26 @@
+version: "3.1"
+services:
+  dusite:
+    image: sometagname
+    container_name: dusite
+    restart: unless_stopped
+    env_file:
+      - .env
+    environment:
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
+    ports:
+      - 8080:8080
+  mariadb:
+    image: mariadb:latest
+    container_name: mariadb
+    restart: unless_stopped
+    env_file:
+      - .env
+    environment:
+      - MYSQL_RANDOM_ROOT_PASSWORD=yes
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
+    
