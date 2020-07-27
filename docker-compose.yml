@@ -10,12 +10,16 @@ services:
       - MYSQL_USER=${MYSQL_USER}
       - MYSQL_PASSWORD=${MYSQL_PASSWORD}
       - MYSQL_DATABASE=${MYSQL_DATABASE}
+      - SLACK_WEBHOOK=${SLACK_WEBHOOK}
+      - SLACK_TOKEN=${SLACK_TOKEN}
     ports:
       - 8080:8080
   mariadb:
     image: mariadb:latest
     container_name: mariadb
     restart: unless_stopped
+    volumes:
+      - ./downloads.sql:/docker-entrypoint-initdb.d/downloads.sql
     env_file:
       - .env
     environment:
