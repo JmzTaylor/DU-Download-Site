@@ -3,3 +3,4 @@ devices
 .idea
 composer.lock
 composer.phar
+.env

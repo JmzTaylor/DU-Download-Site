@@ -22,14 +22,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/index.css"/>
-    <title>Dirty Unicorns Downloads</title>
+    <title>{{ site_name }}</title>
 </head>
 <body>
 
 <div class="d-flex" id="wrapper">
     <div class="bg-light border-right" id="sidebar-wrapper">
         <div class="sidebar-heading">
-            <a href="https://test.dirtyunicorns.com"><img src="../img/logo.png" alt="logo" class="img"/></a>
+            <a href="{{ site_url }}"><img src="../img/logo.png" alt="logo" class="img"/></a>
         </div>
         <div class="list-group list-group-flush">
             {% for device in devices %}

@@ -18,8 +18,5 @@
 
 require_once "functions.php";
 
-while (true) {
-    cleanFiles();
-    getDevices();
-    sleep(500);
-}
+cleanFiles();
+getDevices();

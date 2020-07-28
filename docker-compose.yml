@@ -1,23 +1,23 @@
 version: "3.1"
 services:
   dusite:
-    image: sometagname
+    image: du_download_site:latest
     container_name: dusite
-    restart: unless_stopped
+    restart: unless-stopped
     env_file:
       - .env
+    volumes:
+      - <DIR_WITH_DEVICE_FOLDERS>:/var/www/html/devices
     environment:
       - MYSQL_USER=${MYSQL_USER}
       - MYSQL_PASSWORD=${MYSQL_PASSWORD}
       - MYSQL_DATABASE=${MYSQL_DATABASE}
       - SLACK_WEBHOOK=${SLACK_WEBHOOK}
       - SLACK_TOKEN=${SLACK_TOKEN}
-    ports:
-      - 8080:8080
   mariadb:
     image: mariadb:latest
     container_name: mariadb
-    restart: unless_stopped
+    restart: unless-stopped
     volumes:
       - ./downloads.sql:/docker-entrypoint-initdb.d/downloads.sql
     env_file:
@@ -27,4 +27,3 @@ services:
       - MYSQL_USER=${MYSQL_USER}
       - MYSQL_PASSWORD=${MYSQL_PASSWORD}
       - MYSQL_DATABASE=${MYSQL_DATABASE}
-    

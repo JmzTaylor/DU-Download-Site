@@ -31,7 +31,9 @@ Flight::set("twig", $twig);
 Flight::route('/', function(){
     echo Flight::get("twig")->render('index.html', [
         'devices' => getAllDevices(),
-        'selected_name' => 'Home'
+        'selected_name' => 'Home',
+        'site_url' => getenv("SITE_URL"),
+        'site_name' => getenv("SITE_NAME")
     ]);
 });
 
@@ -40,7 +42,9 @@ Flight::route('/device/@id', function($id){
         'devices' => getAllDevices(),
         'selected_name' => getDeviceName($id),
         'fileTypes' => getReleaseTypesForDevice($id),
-        'files' => getFilesForDevice($id)
+        'files' => getFilesForDevice($id),
+        'site_url' => getenv("SITE_URL"),
+        'site_name' => getenv("SITE_NAME")
     ]);
 });
 

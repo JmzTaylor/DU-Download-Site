@@ -30,6 +30,10 @@ RUN chown -R nobody.nobody /var/www/html && \
   chown -R nobody.nobody /var/lib/nginx && \
   chown -R nobody.nobody /var/log/nginx
 
+# Copy cron
+COPY cron.sh /etc/periodic/15min/cron
+RUN chmod a+x /etc/periodic/15min/cron
+
 # Switch to use a non-root user from here on
 USER nobody
 
