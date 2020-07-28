@@ -11,7 +11,7 @@ The image is only +/- 35MB large.
 * Follows the KISS principle (Keep It Simple, Stupid) to make it easy to understand and adjust the image to your needs
 * Slack slash commands integration
 
-[![Docker Pulls](https://img.shields.io/docker/pulls/trafex/alpine-nginx-php7.svg)](https://hub.docker.com/r/trafex/alpine-nginx-php7/)
+[![Docker Pulls](https://img.shields.io/docker/pulls/jmzsoftware/du_download_site.svg)](https://hub.docker.com/r/jmzsoftware/du_download_site/)
 ![nginx 1.18.0](https://img.shields.io/badge/nginx-1.18-brightgreen.svg)
 ![php 7.3](https://img.shields.io/badge/php-7.3-brightgreen.svg)
 ![License MIT](https://img.shields.io/badge/license-MIT-blue.svg)
